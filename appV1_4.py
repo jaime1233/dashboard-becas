@@ -135,8 +135,9 @@ if df is not None:
 
 else:
     st.error(f"No encontré el archivo '{ARCHIVO_DATOS}'.")
-    st.info("Asegúrate de que el archivo .parquet esté en la ruta: r:/trabajo_2026/dashboard_escuelas/")
+    st.info("Asegúrate de que el archivo .parquet esté en la ruta")
 
 
     
+
 
