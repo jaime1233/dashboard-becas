@@ -6,7 +6,7 @@ import os
 st.set_page_config(page_title="Balance Nacional de Becas", layout="wide")
 
 # Ruta del archivo Parquet
-ARCHIVO_DATOS = r"r:/trabajo_2026/dashboard_escuelas/para_cat_escuelas_enero2026.parquet"
+ARCHIVO_DATOS = "para_cat_escuelas_enero2026.parquet"
 
 @st.cache_data
 def cargar_datos_automatico():
@@ -136,5 +136,6 @@ if df is not None:
 else:
     st.error(f"No encontré el archivo '{ARCHIVO_DATOS}'.")
     st.info("Asegúrate de que el archivo .parquet esté en la ruta: r:/trabajo_2026/dashboard_escuelas/")
+
 
     
