@@ -11,7 +11,7 @@ ARCHIVO_DATOS = "datos.parquet"
 @st.cache_data
 def cargar_datos_automatico():
     if os.path.exists(ARCHIVO_DATOS):
-        df = pd.read_parquet(ARCHIVO_DATOS)
+        df = pd.read_parquet(ARCHIVO_DATOS, engine='pyarrow')
         for col in df.select_dtypes(include=['object']).columns:
             df[col] = df[col].astype('category')
         return df
@@ -139,5 +139,6 @@ else:
 
 
     
+
 
 
