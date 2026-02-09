@@ -6,7 +6,7 @@ import os
 st.set_page_config(page_title="Balance Nacional de Becas", layout="wide")
 
 # Ruta del archivo Parquet
-ARCHIVO_DATOS = "para_cat_escuelas_enero2026.parquet"
+ARCHIVO_DATOS = "datos.parquet"
 
 @st.cache_data
 def cargar_datos_automatico():
@@ -139,3 +139,4 @@ else:
 
 
     
+
